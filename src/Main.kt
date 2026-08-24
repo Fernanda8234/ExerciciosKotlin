@@ -17,6 +17,7 @@ fun main(){
 fun parImpar(){
     val numero = 20
 
+    // % é um modulo
     if(numero % 2 == 0){
         println("é par")
     } else{
@@ -43,13 +44,14 @@ fun idade(){
 
     when(idade){
         in 0 .. 12 -> println("criança")
-        in 12 .. 17 -> println("adolescente")
+        in 13 .. 17 -> println("adolescente")
         in 18 .. 59 -> println("adulto")
-        else -> println("idoso")
+        else -> if(idade < 0) println("inválido") else println("idoso")
     }
 }
 
 fun tabuada(){
+    /* val número = readln().toInt() converter para Strint e depois int*/
     val numero = 20
     var tabuada = 0
 
